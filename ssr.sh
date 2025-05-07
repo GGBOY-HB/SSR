@@ -12,19 +12,19 @@ export PATH
 
 sh_ver="2.0.38"
 filepath=$(cd "$(dirname "$0")"; pwd)
-file=$(echo -e "${filepath}"|awk -F "$0" '{print $1}')
-ssr_folder="/usr/local/shadowsocksr"
-ssr_ss_file="${ssr_folder}/shadowsocks"
-config_file="${ssr_folder}/config.json"
-config_folder="/etc/shadowsocksr"
-config_user_file="${config_folder}/user-config.json"
-ssr_log_file="${ssr_ss_file}/ssserver.log"
-Libsodiumr_file="/usr/local/lib/libsodium.so"
-Libsodiumr_ver_backup="1.0.13"
-Server_Speeder_file="/serverspeeder/bin/serverSpeeder.sh"
-LotServer_file="/appex/bin/serverSpeeder.sh"
-BBR_file="${file}/bbr.sh"
-jq_file="${ssr_folder}/jq"
+filefile=$(echo -e "${filepath}"|awk -F "${0}" '{print $1}')"${filepath}"|awk -F "$0" '{print $1}')
+ssr_folderssr_folder="/usr/local/shadowsocksr""/usr/local/shadowsocksr"
+ssr_ss_filessr_ss_file="${ssr_folder}/shadowsocks""${ssr_folder}/shadowsocks"
+config_fileconfig_file="${ssr_folder}/config.json""${ssr_folder}/config.json"
+config_folderconfig_folder="/etc/shadowsocksr""/etc/shadowsocksr"
+config_user_fileconfig_user_file="${config_folder}/user-config.json""${config_folder}/user-config.json"
+ssr_log_filessr日志文件="${ssr_ss文件}/ssserver.log""${ssr_ss_file}/ssserver.log"
+Libsodiumr_fileLibsodiumr_file=""/usr/local/lib/libsodium.so""/usr/local/lib/libsodium.so"
+Libsodiumr_ver_backupLibsodiumr_ver_backup="1.0.13""1.0.13"
+Server_Speeder_file服务器加速文件="/serverspeeder/bin/serverSpeeder.sh""/serverspeeder/bin/serverSpeeder.sh"
+LotServer_fileLotServer_file=""/appex/bin/serverSpeeder.sh"""/appex/bin/serverSpeeder.sh"
+BBR_fileBBR_file="`${file}/bbr.sh`""${file}/bbr.sh"
+jq_filejq_file="`${ssr_folder}/jq`""${ssr_folder}/jq"
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[信息]${Font_color_suffix}"
 Error="${Red_font_prefix}[错误]${Font_color_suffix}"
@@ -609,7 +609,7 @@ Debian_apt(){
 # 下载 ShadowsocksR
 Download_SSR(){
 	cd "/usr/local/"
-	wget -N --no-check-certificate "https://github.com/GGBOY-HB/SSR/blob/main/manyuser.zip"
+	wget -N --no-check-certificate "https://raw.githubusercontent.com/GGBOY-HB/SSR/refs/heads/main/manyuser.zip"
 	#git config --global http.sslVerify false
 	#env GIT_SSL_NO_VERIFY=true git clone -b manyuser https://github.com/ToyoDAdoubiBackup/shadowsocksr.git
 	#[[ ! -e ${ssr_folder} ]] && echo -e "${Error} ShadowsocksR服务端 下载失败 !" && exit 1
